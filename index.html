@@ -1,35 +1,42 @@
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Client Side Programming</title>
-    <!-- bootstrap and Css linked -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Side</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
     <!-- navbar -->
-    <nav>
-        <div class="logo">
-            Cafe Goiano
-        </div>
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Order Online</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact us</a></li>
-        </ul>
-    </nav>
+    <div class="nav-bar">
+        <nav>
+            <div class="logo">
+                Cafe Goiano
+            </div>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul style="border-top-width:18px;border-top-style:solid">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Order Online</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- password validator -->
-    
+
+
+
     <div class="center">
         <div class="form">
             <div class="form-element">
@@ -58,13 +65,15 @@
 
 
 
+    <!-- fetch API -->
+    <div class="container">
+        <h1 class="display-4 mt-3">Getting ramdom users</h1>
+        <button class="btn btn-primary" id="myBtn">Get Data</button>
+    </div>
+    <div id="output"></div>
 
-    <style>
-        body {
-            background-image: url(img/background.jpg);
-        }
-    </style>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
+
 </body>
 
 </html>
