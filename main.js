@@ -67,7 +67,7 @@ function getData() {
           // console.log(author);
 
           //Get Data Value
-          let output = "<h2><center>Get User Data</center></h2>";
+          let output = "";
 
           //Get Data Loop Through
           author.forEach(function (lists) {

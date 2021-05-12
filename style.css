@@ -1,3 +1,7 @@
+body{
+    background-image: url('img/background.jpg');
+}
+
 nav {
     display: flex;
     height: 80px;
@@ -140,7 +144,7 @@ body {
     width: 100%;
     padding: 10px;
     font-size: 18px;
-    border: 1px solid #888;
+    /* border: 1px solid #888; */
     background: #f5f5f5;
     box-sizing: border-box;
     border-radius: 50px;
@@ -181,8 +185,8 @@ body {
     margin-top: 10px;
     box-sizing: border-box;
     opacity: 0;
-    overflow: hidden;
-    transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
+    /* overflow: hidden;
+    transition: height 300ms ease-in-out, opacity 300ms ease-in-out; */
 }
 .form .form-element .password-policies.active {
     opacity: 1;
@@ -223,4 +227,16 @@ div.container:nth-child(n) > div:nth-child(n){
 }
 i.fa:nth-child(1){
     padding-top: 0.9rem;
+}
+.user-card {
+    width: 100px;
+    
+}
+.user-icon {
+    min-height: 450px;
+    width: auto;
+}
+.form-element{
+    border-left-width: 75px;
+    margin-right: -100px;
 }
