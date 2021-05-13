@@ -64,7 +64,7 @@ function getData() {
           // console.log(data);
 
           let author = data.results;
-          // console.log(author);
+          console.log(author);
 
           //Get Data Value
           let output = "";
@@ -97,3 +97,15 @@ function getData() {
 };
 
 //menu itens code
+
+new Vue({
+  el: '#app',
+  mounted: function(){$('.collapsible').collapsible();},
+  data: {
+    cards: [
+      { title: 'Macaron', src: 'https://res.cloudinary.com/landry-bete/image/upload/v1488769144/dessert14_trnhnj.jpg', description:'Is this thing French ?'},
+     { title: 'Tajine', src: 'https://res.cloudinary.com/landry-bete/image/upload/v1525135352/tajine_mfnbd8.jpg', description:'Moroccan people seem to love that dish...'},
+      { title: 'Cake', src: 'https://res.cloudinary.com/landry-bete/image/upload/v1525135530/cake_lnh2hn.jpg', description:'Eat healthy my boy!'},
+    ]
+  }
+  })

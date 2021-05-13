@@ -226,10 +226,10 @@ h1{
     margin-top: 9px;
 }
 div.container:nth-child(n) > div:nth-child(n){
-    /* margin-right: 800px;
-    margin-left: 1px; */
-    /* padding-right: 0px; */
-    /* float: none; */
+    margin-right: 800px;
+    margin-left: 1px;
+    padding-right: 0px;
+    float: none;
     width: 50%;
     height: 70%;
     
@@ -268,3 +268,12 @@ body > h1:nth-child(3){
     text-align: center;
     padding: 1.5rem;
 }
+.vignette {
+    max-width: 60px;
+    max-height: 60px;
+    margin-right: 4%;
+  }
+  
+  #app {
+    margin-top:50px
+  }  
