@@ -1,5 +1,7 @@
 body{
-    background-image: url('img/background.jpg');
+    /* background-image: url('img/background.jpg');
+    font-family: "Raleway"; */
+    background-color: #888;
 }
 
 nav {
@@ -12,6 +14,7 @@ nav {
     padding: 0 50px 0 100px;
     flex-wrap: wrap;
     background-color: black;
+    text-align: center;
 }
 
 nav .logo {
@@ -124,10 +127,6 @@ input[type="checkbox"] {
         font-weight: 700;
     }
 }
-body {
-    /* background: #ee0058; */
-    font-family: "Raleway";
-}
 .center {   
     position: absolute;
     top: 50%;
@@ -150,6 +149,7 @@ body {
     border-radius: 50px;
     outline: none;
     text-indent: 10px;
+    /* top: -45px; */
 }
 .form .form-element .toggle-password {
     position: absolute;
@@ -210,29 +210,61 @@ h1{
 .display-4{
     font-size: 25px;
     float: left;
+    padding-left: 24px;
+    margin-right: 20px;
+    margin-bottom: 0.5rem;
+
 
 }
 #myBtn{
     border-style: inherit;
     border-width: 30%;
-    padding-right: 0.2rem;
+    padding-right: 1.2rem;
+    margin-right: 0px;
+    padding-right: 1.2rem;
+    margin-bottom: 0px;
+    margin-top: 9px;
 }
 div.container:nth-child(n) > div:nth-child(n){
-    margin-right: 800px;
-    margin-left: 1px;
-    padding-right: 0px;
-    float: none;
-    width: 30%;
+    /* margin-right: 800px;
+    margin-left: 1px; */
+    /* padding-right: 0px; */
+    /* float: none; */
+    width: 50%;
+    height: 70%;
     
 }
 #output > h2:nth-child(1) > center:nth-child(1){
     display:block;
     color: #fff;
     float: left;
+    
 }
 i.fa:nth-child(1){
     padding-top: 0.9rem;
 }
 div.container:nth-child(n){
 margin-left: 1px;
+margin-right: 280px;
+}
+#password-field{
+    padding-top: 1px;
+    padding-bottom: 15px;
+}
+.form-element{
+    top: -45px;
+  
+}
+.container{
+    width: 90%;
+}
+div.container:nth-child(n){
+    grid-row: initial;
+    margin-left: 1.2rem;
+    
+}
+
+body > h1:nth-child(3){
+    text-align: center;
+    padding: 1.5rem;
 }
