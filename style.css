@@ -1,15 +1,14 @@
-body{
+body {
     background-image: url('img/background.jpg');
-    font-family: "Raleway"; 
-    background-color: #888;
+    font-family: "Raleway";
 }
 
 nav {
     display: flex;
     height: 80px;
     width: 100%;
-    /* background: #1b1b1b; */
-    /* align-items: center; */
+    background: #1b1b1b;
+    align-items: center;
     justify-content: space-between;
     padding: 0 50px 0 100px;
     flex-wrap: wrap;
@@ -106,8 +105,7 @@ input[type="checkbox"] {
     #click:checked~ul li a {
         margin-left: 0px;
     }
-    nav ul li a.active,
-    nav ul li a:hover {
+    nav ul li a.active, nav ul li a:hover {
         background: none;
         color: cyan;
     }
@@ -127,18 +125,22 @@ input[type="checkbox"] {
         font-weight: 700;
     }
 }
-.center {   
+
+.center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .form {
     width: 300px;
 }
+
 .form .form-element {
     position: relative;
 }
+
 .form .form-element input {
     width: 100%;
     padding: 10px;
@@ -151,6 +153,7 @@ input[type="checkbox"] {
     text-indent: 10px;
     /* top: -45px; */
 }
+
 .form .form-element .toggle-password {
     position: absolute;
     width: 40px;
@@ -163,15 +166,19 @@ input[type="checkbox"] {
     font-size: 20px;
     cursor: pointer;
 }
+
 .form .form-element .toggle-password.active i.fa-eye {
     display: none;
 }
+
 .form .form-element .toggle-password.active i.fa-eye-slash {
     display: inline;
 }
+
 .form .form-element .toggle-password i.fa-eye-slash {
     display: none;
 }
+
 .form .form-element .password-policies {
     position: relative;
     top: 0px;
@@ -188,35 +195,37 @@ input[type="checkbox"] {
     overflow: hidden;
     transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
 }
+
 .form .form-element .password-policies.active {
     opacity: 1;
     padding: 10px;
     height: 180px;
 }
+
 .form .form-element .password-policies>div {
     margin: 15px 10px;
     font-weight: 600;
     color: #888;
     transition: all 300ms ease-in-out;
 }
+
 .form .form-element .password-policies>div.active {
     color: rgb(42, 148, 60);
 }
-h1{
+
+h1 {
     color: white;
-  
 }
 
-.display-4{
+.display-4 {
     font-size: 25px;
     float: left;
     padding-left: 24px;
     margin-right: 20px;
     margin-bottom: 0.5rem;
-
-
 }
-#myBtn{
+
+#myBtn {
     border-style: inherit;
     border-width: 30%;
     padding-right: 1.2rem;
@@ -225,55 +234,62 @@ h1{
     margin-bottom: 0px;
     margin-top: 9px;
 }
-div.container:nth-child(n) > div:nth-child(n){
+
+div.container:nth-child(n)>div:nth-child(n) {
     margin-right: 800px;
     margin-left: 1px;
     padding-right: 0px;
     float: none;
     width: 50%;
     height: 70%;
-    
 }
-#output > h2:nth-child(1) > center:nth-child(1){
-    display:block;
+
+#output>h2:nth-child(n)>center:nth-child(n) {
+    display: block;
     color: #fff;
     float: left;
-    
 }
-i.fa:nth-child(1){
+
+i.fa:nth-child(n) {
     padding-top: 0.9rem;
 }
-div.container:nth-child(n){
-margin-left: 1px;
-margin-right: 280px;
+
+div.container:nth-child(n) {
+    margin-left: 1px;
+    margin-right: 280px;
 }
-#password-field{
+
+#password-field {
     padding-top: 1px;
     padding-bottom: 15px;
 }
-.form-element{
+
+.form-element {
     top: -45px;
-  
-}
-.container{
-    width: 90%;
-}
-div.container:nth-child(n){
-    grid-row: initial;
-    margin-left: 1.2rem;
-    
 }
 
-body > h1:nth-child(3){
-    text-align: center;
-    padding: 1.5rem;
+.container {
+    width: 90%;
 }
-.vignette {
-    max-width: 60px;
-    max-height: 60px;
-    margin-right: 4%;
-  }
-  
-  #app {
-    margin-top:50px
-  }  
+
+div.container:nth-child(n) {
+    grid-row: initial;
+    margin-left: 1.2rem;
+}
+
+body>h1:nth-child(n) {
+    text-align: center;
+}
+
+div.container:nth-child(n)>table:nth-child(n) {
+    float: inline-end;
+    bottom: 20%;
+    background: none;
+}
+
+div.card:nth-child(n) {
+    margin-right: 334px;
+    margin-left: 1.2rem;
+    margin-right: 59;
+    margin-bottom: -15px;
+}

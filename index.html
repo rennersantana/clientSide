@@ -17,6 +17,40 @@
     <!-- link CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+       
+
+        th,
+        td {
+            padding: 5px;
+        }
+
+        table {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 12px;
+            width: 400px;
+
+        }
+
+        table th {
+            background-color: cadetblue;
+        }
+
+        td.total {
+            background-color: lightgrey;
+        }
+
+        .right {
+            text-align: right;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -72,34 +106,81 @@
         </div>
 
 
-        <!-- food Menu  -->
+        <!--________ food Menu__________  -->
 
-        <div class="row">
-            <div class="col l6 m8 s12 offset-m2 offset-l3">
-              <ul id="app" class="collapsible popout">
-                <li v-for="card in cards" :key="card.title">
-                  <div class="collapsible-header "><img :src="card.src" class="circle vignette "><span class="headline white--text" v-text="card.title"></span></div>
-                  <div class="collapsible-body white"><span class="headline white--text" v-text="card.description"></span></div>
-                </li>
-          
-              </ul>
-          
+        <table>
+            <div class="table">
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                <tr>
+                    <td>Chicken fingers</td>
+                    <td>
+                        <input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100" />
+                    </td>
+                    <td>€100</td>
+                </tr>
+                <tr>
+                    <td>Item B</td>
+                    <td><input name="qnt_2" type="text" id="qnt_2" value="0" size="3" data-price="50" /></td>
+                    <td>€50</td>
+                </tr>
+                <tr>
+                    <td>Item C</td>
+                    <td><input name="qnt_3" type="text" id="qnt_3" value="0" size="3" data-price="30" /></td>
+                    <td>€30</td>
+                </tr>
+                <tr>
+                    <td>Item D</td>
+                    <td><input name="qnt_4" type="text" id="qnt_4" value="0" size="3" data-price="24" /></td>
+                    <td>€24</td>
+                </tr>
+                <tr>
+                    <td class="total">&nbsp;</td>
+                    <td class="total right"><strong>Total:</strong></td>
+                    <td class="total"><strong>
+                            <div id="ItemsTotal">€0</div>
+                        </strong></td>
+                </tr>
             </div>
-          </div>
-          
+        </table>
 
-        <!-- fetch API -->
 
-        
+        <script>
+            var total_items = 4;
+
+            function CalculateItemsValue() {
+                var total = 0;
+
+                for (let i = 1; i <= total_items; i++) {
+                    itemID = document.getElementById("qnt_" + i);
+                    total = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
+
+                }
+                document.getElementById('ItemsTotal').innerHTML = "€" + total;
+            }
+
+            document.querySelectorAll('[id^="qnt_"]').forEach(item => {
+                item.addEventListener('keyup', CalculateItemsValue);
+            });
+
+        </script>
+
+
+        <!--_____________ fetch API ______________-->
+
+
         <div class="container button">
             <h1 class="display-4 mt-3">Getting users </h1>
             <button class="btn btn-primary" id="myBtn"> Refresh</button>
 
-            <h1>testing my container</h1>
+            <h1></h1>
         </div>
         <div id="output"></div>
 
     </div>
+
 
     <script src="main.js"></script>
 </body>
