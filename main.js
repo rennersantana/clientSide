@@ -91,34 +91,69 @@ function getData() {
 };
 
 /*========Table content start*/
-var total_items = 5;
+var total_items = 13;
 
 
-function CalculateItemsValue() {
-    var total = 0;
-    var totalMain = 0;
-    var totalStarter = 0;
+function CalculateItemsValue(e) {
 
-    for (let i = 1; i <= total_items; i++) {
-        itemID = document.getElementById("qnt_" + i);
+  var total = 0;
+  var totalMain = 0;
+  var totalStarter = 0;
+  var totalDrinks = 0;
+  var totalDesserts = 0;
+  var totalVeg = 0;
+  var totalNonVeg = 0;
 
-        if (itemID.className == "main") {
+  for (var i=1;i<=total_items;i++){
+    var id = "qnt_"+i;
 
-            totalMain += parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
-        }
-        if (itemID.className == "starters") {
 
-            totalStarter += parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
-        }
+    var item = document.getElementById(id);
+    var itemClass =item.className;
+    var itemQuant = parseInt(item.value);
+    var itemPrice = parseInt(item.getAttribute("data-price"));
 
+
+    if (itemClass === "main") {
+      totalMain +=  itemQuant * itemPrice;
     }
-    document.getElementById('ItemsTotal').innerHTML = "€" + (totalMain + totalStarter);
-    document.getElementById('ItemsTotalMain').innerHTML = "€" + totalMain;
-    document.getElementById('ItemsTotalStarter').innerHTML = "€" + totalStarter;
+    else if (itemClass === "starters") {
 
+      totalStarter += itemQuant * itemPrice;
+    }
+    else if (itemClass === "drinks") {
+
+      totalDrinks += itemQuant * itemPrice;
+    }
+    else if (itemClass === "desserts") {
+
+      totalDesserts += itemQuant * itemPrice;
+    }
+
+    else if (itemClass === "vegetarian") {
+
+      totalVeg += itemQuant * itemPrice;
+    }
+
+
+  document.getElementById('ItemsTotalMain').innerHTML = "€" + totalMain;
+  document.getElementById('ItemsTotalStarter').innerHTML = "€" + totalStarter;
+  document.getElementById('ItemsTotalDrinks').innerHTML = "€" + totalDrinks;
+  document.getElementById('ItemsTotalDesserts').innerHTML = "€" + totalDesserts;
+  document.getElementById('ItemsTotalVeg').innerHTML = "€" + totalVeg;
+  document.getElementById('ItemsTotalNonVeg').innerHTML = "€" + totalNonVeg;
+
+
+  document.getElementById('ItemsTotal').innerHTML = "€" + (totalMain + totalStarter + totalDrinks + totalDesserts + totalNonVeg + totalVeg);
+}
 }
 
 document.querySelectorAll('[id^="qnt_"]').forEach(item => {
-    item.addEventListener('keyup', CalculateItemsValue);
+  item.addEventListener('keyup', function(e) {
+    if (e.keyCode === 13)
+    CalculateItemsValue(e)
+
+  });
+
 });
 /*========Table content start*/

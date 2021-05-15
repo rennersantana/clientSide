@@ -87,10 +87,10 @@
     <!--____________Start table menu_____________-->
     <section class="menu-content">
         <div class="table-content">
-            <table>
+            <table class>
 
                 <tr>
-                    <th>&nbsp;</th>
+                    <th>Starters</th>
                     <th>Quantity</th>
                     <th>Price</th>
                 <tr>
@@ -101,31 +101,115 @@
                     <td>€5</td>
                 </tr>
                 <tr>
+                    <td>Garlic Bread ( Starter ) - Individual freshly baked rolls served with garlic butter</td>
+                    <td>
+                        <input name="qnt_2" type="text" id="qnt_2" class="starters" value="0" size="3" data-price="5" />
+                    </td>
+                    <td>€5</td>
+                </tr>
+                <tr>
                     <td>Pepper Calamari ( Starter ) - Fresh fried calamari dusted with fresh rocket salad</td>
-                    <td><input name="qnt_2" type="text" id="qnt_2" class="starters" value="0" size="3"
+                    <td><input name="qnt_3" type="text" id="qnt_3" class="starters" value="0" size="3"
                             data-price="11" /></td>
                     <td>€11</td>
                 </tr>
                 <tr>
-                    <td>Hot and Spice Wing ( Starter ) - Juicy chicken wings marinated in super hot sauce</td>
-                    <td><input name="qnt_3" type="text" id="qnt_3" class="starters" value="0" size="3"
+                    <td>Vegetarian Starter option</td>
+                    <td><input name="qnt_4" type="text" id="qnt_4" class="vegetarian" value="0" size="3"
                             data-price="14" /></td>
                     <td>€14</td>
+                <tr>
+                    <th>Mains</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                <tr>
                 </tr>
                 <tr>
                     <td>Vegan Deluxe ( Main ) - Fried chicken topped with fresh salad and in-house baked bun</td>
-                    <td><input name="qnt_4" type="text" id="qnt_4" class="main" value="0" size="3" data-price="15" />
+                    <td><input name="qnt_5" type="text" id="qnt_5" class="main" value="0" size="3" data-price="15" />
+                    </td>
+                    <td>€15</td>
+                </tr>
+                <tr>
+                    <td>Garlic Bread ( Starter ) - Individual freshly baked rolls served with garlic butter</td>
+                    <td>
+                        <input name="qnt_6" type="text" id="qnt_6" class="main" value="0" size="3" data-price="5" />
+                    </td>
+                    <td>€5</td>
+                </tr>
+
+                <tr>
+                    <td>Mash potatos ( Main ) - Fried chicken topped with fresh salad and in-house baked bun</td>
+                    <td><input name="qnt_7" type="text" id="qnt_7" class="main" value="0" size="3" data-price="10" />
+                    </td>
+                    <td>€10</td>
+
+                </tr>
+
+                <td>Vegetarian Main option</td>
+                <td>
+                    <input name="qnt_8" type="text" id="qnt_8" class="vegetarian" value="0" size="3" data-price="8" />
+                </td>
+                <td>€8</td>
+                <tr>
+                    <th>Drinks</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                <tr>
+                <tr>
+                    <td>Drink 1</td>
+                    <td><input name="qnt_9" type="text" id="qnt_9" class="drinks" value="0" size="3" data-price="15" />
                     </td>
                     <td>€15</td>
                 </tr>
 
                 <tr>
-                    <td>Mash potatos ( Main ) - Fried chicken topped with fresh salad and in-house baked bun</td>
-                    <td><input name="qnt_5" type="text" id="qnt_5" class="main" value="0" size="3" data-price="10" />
+                    <td>Drink 2</td>
+                    <td><input name="qnt_10" type="text" id="qnt_10" class="drinks" value="0" size="3"
+                            data-price="10" />
                     </td>
                     <td>€10</td>
+
+                </tr>
+                <tr>
+                    <td>Drink 3</td>
+                    <td><input name="qnt_11" type="text" id="qnt_11" class="drinks" value="0" size="3"
+                            data-price="10" />
+                    </td>
+                    <td>€10</td>
+
+                </tr>
+                <tr>
+                    <th>Desserts</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                <tr>
+                <tr>
+                    <td>Dessert 1</td>
+                    <td><input name="qnt_12" type="text" id="qnt_12" class="desserts" value="0" size="3"
+                            data-price="15" />
+                    </td>
+                    <td>€15</td>
                 </tr>
 
+                <tr>
+                    <td>Dessert 2</td>
+                    <td><input name="qnt_13" type="text" id="qnt_13" class="desserts" value="0" size="3"
+                            data-price="10" />
+                    </td>
+                    <td>€10</td>
+
+                </tr>
+
+
+
+                <tr>
+                    <td class="total">&nbsp;</td>
+                    <td class="total right"><strong>Starter:</strong></td>
+                    <td class="total"><strong>
+                            <div id="ItemsTotalStarter">€0</div>
+                        </strong></td>
+                </tr>
                 <tr>
                     <td class="total">&nbsp;</td>
                     <td class="total right"><strong>Main:</strong></td>
@@ -136,9 +220,33 @@
 
                 <tr>
                     <td class="total">&nbsp;</td>
-                    <td class="total right"><strong>Starter:</strong></td>
+                    <td class="total right"><strong>Drinks:</strong></td>
                     <td class="total"><strong>
-                            <div id="ItemsTotalStarter">€0</div>
+                            <div id="ItemsTotalDrinks">€0</div>
+                        </strong></td>
+                </tr>
+
+                <tr>
+                    <td class="total">&nbsp;</td>
+                    <td class="total right"><strong>Desserts:</strong></td>
+                    <td class="total"><strong>
+                            <div id="ItemsTotalDesserts">€0</div>
+                        </strong></td>
+                </tr>
+
+                <tr>
+                    <td class="total">&nbsp;</td>
+                    <td class="total right"><strong>Vegetarian:</strong></td>
+                    <td class="total"><strong>
+                            <div id="ItemsTotalVeg">€0</div>
+                        </strong></td>
+                </tr>
+
+                <tr>
+                    <td class="total">&nbsp;</td>
+                    <td class="total right"><strong>Non Vegetarian:</strong></td>
+                    <td class="total"><strong>
+                            <div id="ItemsTotalNonVeg">€0</div>
                         </strong></td>
                 </tr>
 
