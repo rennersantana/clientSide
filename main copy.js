@@ -1,4 +1,3 @@
-/* password validation */
 function _id(name) {
   return document.getElementById(name);
 }
@@ -48,10 +47,9 @@ _id("password-field").addEventListener("keyup", function () {
     _class("policy-length")[0].classList.remove("active");
   }
 });
-/* ===end of password validator===*/
 
 
-/*Start the randon user Fetch API*/
+//code for random user API
 
 //Get Btn And Create Function
 document.getElementById('myBtn').addEventListener('click', getData);
@@ -73,15 +71,17 @@ function getData() {
 
       //Get Data Loop Through
       author.forEach(function (lists) {
-        output += ` <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="${lists.picture.large}"" alt="Card image cap">
-                    <div class="card-body">
-              <h5 class="card-title">Name: ${lists.name.first}</h5>
-              <ul class="list-group">
-                  <li class="list-group-item">Phone Number: ${lists.cell}</li>
-    </ul>
-            </div>
-          </div>`;
+        output += `
+              <div class="container">
+                  <div class="card mt-4 bg-light">
+                      <ul class="list-group">
+                          <li class="list-group-item"><h2>Name: ${lists.name.first}</h2></li>
+                          <li class="list-group-item"><img src="${lists.picture.medium}"></li>
+                          <li class="list-group-item">Phone Number: ${lists.cell}</li>
+                         
+                      </ul>
+                  </div>
+            </div `;
       });
 
       //Show On Our Screen All Data
@@ -90,35 +90,17 @@ function getData() {
     });
 };
 
-/*========Table content start*/
-var total_items = 5;
+//menu itens code
 
+new Vue({
+  el: '#app',
+  mounted: function () { $('.collapsible').collapsible(); },
+  data: {
+    cards: [
+      { title: 'Macaron', src: 'https://res.cloudinary.com/landry-bete/image/upload/v1488769144/dessert14_trnhnj.jpg', description: 'Is this thing French ?' },
+      { title: 'Tajine', src: 'https://res.cloudinary.com/landry-bete/image/upload/v1525135352/tajine_mfnbd8.jpg', description: 'Moroccan people seem to love that dish...' },
+      { title: 'Cake', src: 'https://res.cloudinary.com/landry-bete/image/upload/v1525135530/cake_lnh2hn.jpg', description: 'Eat healthy my boy!' },
+    ]
+  }
+})
 
-function CalculateItemsValue() {
-    var total = 0;
-    var totalMain = 0;
-    var totalStarter = 0;
-
-    for (let i = 1; i <= total_items; i++) {
-        itemID = document.getElementById("qnt_" + i);
-
-        if (itemID.className == "main") {
-
-            totalMain += parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
-        }
-        if (itemID.className == "starters") {
-
-            totalStarter += parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
-        }
-
-    }
-    document.getElementById('ItemsTotal').innerHTML = "€" + (totalMain + totalStarter);
-    document.getElementById('ItemsTotalMain').innerHTML = "€" + totalMain;
-    document.getElementById('ItemsTotalStarter').innerHTML = "€" + totalStarter;
-
-}
-
-document.querySelectorAll('[id^="qnt_"]').forEach(item => {
-    item.addEventListener('keyup', CalculateItemsValue);
-});
-/*========Table content start*/

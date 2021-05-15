@@ -1,85 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/*navbar*/
+body{
+    background-image: url(/img/background4.jpg);
+}
+h1{
+    color: white;
 }
 
-.navbar {
-    padding: 1rem 8rem;
+.nav li a{
+    text-decoration: none;
+    color: orange;
+    font-size: 30px;
+    text-transform:uppercase ;
+    font-weight: bold;
+   
 }
-
-.navbar .navbar-brand {
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-#navbarSupportedContent>ul>li:nth-child(n)>a {
+.nav li a:hover{
     color: #fff;
-    font-size: 1.1rem;
-    padding: 0 0.8rem;
+    background: orange;
+    padding-left: 10px;
 }
-
-#navbarSupportedContent>ul>li:nth-child(n)>a:hover {
-    color: #00bf85;
+.nav li{
+    margin: 20px 10px 10px 20px;
+    padding-top: 10px;
+    list-style-type:none;
 }
-
-#navbarSupportedContent>button {
-    background: #00bf85;
-    font-weight: 600;
-    padding: 0.4rem 1.4rem;
-    border-radius: 30px;
+.nav{
+    display: none;
+    
 }
+/* ====End of Nacbar===== */
 
-body {
-    background-image: url('img/background2.jpg');
-    /* background-origin: content-box;
-    font-family: "Raleway";
-    font-family: Lato;
-    margin: 1em 8em;
-    font-size: 1.4em;
-    height: 20%;
-    width: 80%; */
-}
-
-/* Table food menu */
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    padding: 5px;
-}
-
-table {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 12px;
-    width: 400px;
-    background: #f5f5f5;
-    size: 5rem;
-}
-
-table th {
-    background-color: cadetblue;
-}
-
-td.total {
-    background-color: lightgrey;
-}
-
-.right {
-    text-align: right;
-}
-
-.table-content {
-    padding: 8rem 3rem;
-    margin-left: -97px;
-    border-radius: 50px;
-}
-
-/* Password validation */
+/* ===Start password Validator */
 
 .password-box {
     position: position;
@@ -88,67 +39,28 @@ td.total {
     text-align: center;
     
 }
-
-/* Random User API */
-
-.container button {
-    position: relative;
-    margin-top: 65px;
-}
-
-.table-content>table:nth-child(n) {
-    margin-left: 500px;
-    padding-top: 2rem;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-}
-
-.display-4 {
-    font-size: 25px;
-    float: left;
-    padding-left: 24px;
-    margin-right: 20px;
-    margin-bottom: 0.5rem;
-}
-
-#myBtn {
-    border-style: inherit;
-    border-width: 30%;
-    padding-right: 1.2rem;
-    margin-right: 0px;
-    padding-right: 1.2rem;
-    margin-bottom: 0px;
-    margin-top: 9px;
-}
-
-#output {
-    text-align: center;
-    padding-left: var(--bs-gutter-x, 7.75rem);
-    padding-right: var(--bs-gutter-x, 10.75rem);
-}
-
 .form {
-    width: 300px;
+    width: 350px;
+    margin-left: 400px;
+    
 }
 
 .form .form-element {
     position: relative;
-    right: -488px;
+    right: -32px;
+    
 }
-
 .form .form-element input {
     width: 100%;
     padding: 10px;
     font-size: 18px;
-    border: 1px solid #888;
+    border: 3px solid #888;
     background: #f5f5f5;
     box-sizing: border-box;
-    border-radius: 50px;
+    border-radius: 20px;
     outline: none;
     text-indent: 10px;
 }
-
 .form .form-element .toggle-password {
     position: absolute;
     width: 40px;
@@ -161,19 +73,15 @@ td.total {
     font-size: 20px;
     cursor: pointer;
 }
-
 .form .form-element .toggle-password.active i.fa-eye {
     display: none;
 }
-
 .form .form-element .toggle-password.active i.fa-eye-slash {
     display: inline;
 }
-
 .form .form-element .toggle-password i.fa-eye-slash {
     display: none;
 }
-
 .form .form-element .password-policies {
     position: relative;
     top: 0px;
@@ -190,33 +98,98 @@ td.total {
     overflow: hidden;
     transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
 }
-
 .form .form-element .password-policies.active {
     opacity: 1;
     padding: 10px;
     height: 180px;
 }
-
 .form .form-element .password-policies>div {
     margin: 15px 10px;
     font-weight: 600;
     color: #888;
     transition: all 300ms ease-in-out;
 }
-
 .form .form-element .password-policies>div.active {
     color: rgb(42, 148, 60);
 }
-
-div.container:nth-child(1) {
-    padding-left: var(--bs-gutter-x, -0.25rem);
-    padding-right: var(--bs-gutter-x, -0.25rem);
-}
-
 .password-policies {
     font-size: 15px;
 }
+/* ======end of password validator======= */
 
-h1 {
-    color: white;
+
+/* =====Table food menu===== */
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 5px;
+}
+
+table {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    width: 800px;
+    background: #f5f5f5;
+    size: 8rem;
+}
+
+table th {
+    background-color: cadetblue;
+}
+
+td.total {
+    background-color: lightgrey;
+}
+
+.right {
+    text-align: right;
+}
+
+.table-content {
+    padding: 0rem 30rem;
+    margin-left: -97px;
+    border-radius: 50px;
+    margin-right: 0px;
+    border-right-width: 0px;
+    border-right-style: solid;
+    padding-right: 25rem;
+    
+}
+/* ======End of food menu====== */
+
+/*=====Start the ramdom API=====*/
+
+.container button {
+    position: relative;
+   
+}
+
+
+.display-4 {
+    font-size: 25px;
+    /* float: left; */
+    padding-left: 24px;
+    margin-right: 20px;
+    margin-bottom: 0.5rem;
+    width: 50%;
+}
+#output {
+    text-align: center;
+    padding-left: var(--bs-gutter-x, 7.75rem);
+    padding-right: var(--bs-gutter-x, 10.75rem);
+    width: 1200px;
+   
+
+}
+#myBtn {
+    border-style: inherit;
+    border-width: 30%;
+    padding-right: 1.2rem;
+    margin-right: 0px;
+    padding-right: 1.2rem;
+    margin-bottom: 0px;
+    margin-top: 9px;
 }
