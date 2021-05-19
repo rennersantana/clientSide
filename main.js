@@ -96,13 +96,12 @@ var total_items = 13;
 
 function CalculateItemsValue(e) {
 
-  var total = 0;
   var totalMain = 0;
   var totalStarter = 0;
   var totalDrinks = 0;
   var totalDesserts = 0;
   var totalVeg = 0;
-  var totalNonVeg = 0;
+  // var totalNonVeg = 0;
 
   for (var i=1;i<=total_items;i++){
     var id = "qnt_"+i;
@@ -141,10 +140,10 @@ function CalculateItemsValue(e) {
   document.getElementById('ItemsTotalDrinks').innerHTML = "€" + totalDrinks;
   document.getElementById('ItemsTotalDesserts').innerHTML = "€" + totalDesserts;
   document.getElementById('ItemsTotalVeg').innerHTML = "€" + totalVeg;
-  document.getElementById('ItemsTotalNonVeg').innerHTML = "€" + totalNonVeg;
+  // document.getElementById('ItemsTotalNonVeg').innerHTML = "€" + totalNonVeg;
 
 
-  document.getElementById('ItemsTotal').innerHTML = "€" + (totalMain + totalStarter + totalDrinks + totalDesserts + totalNonVeg + totalVeg);
+  document.getElementById('ItemsTotal').innerHTML = "€" + (totalMain + totalStarter + totalDrinks + totalDesserts + totalVeg);
 }
 }
 

@@ -21,34 +21,21 @@
 <body>
     <!--______Start of navbar______-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkcyan;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Cafe Pizzeria</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index copy.html">More Info</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact us</a>
-                        </li>
-                    </ul>
+        <div class="main">
 
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png">
                 </div>
-
-            </div>
-        </nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="second.html">More Info</a></li>
+                        <li><a href="#">Github link</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <!--==========End of NavBar=========-->
 
@@ -85,182 +72,184 @@
     <!--==========End of password validator==========-->
 
     <!--____________Start table menu_____________-->
-    <section class="menu-content">
-        <div class="table-content">
-            <table class>
 
-                <tr>
-                    <th>Starters</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                <tr>
-                    <td>Garlic Bread ( Starter ) - Individual freshly baked rolls served with garlic butter</td>
-                    <td>
-                        <input name="qnt_1" type="text" id="qnt_1" class="starters" value="0" size="3" data-price="5" />
-                    </td>
-                    <td>€5</td>
-                </tr>
-                <tr>
-                    <td>Garlic Bread ( Starter ) - Individual freshly baked rolls served with garlic butter</td>
-                    <td>
-                        <input name="qnt_2" type="text" id="qnt_2" class="starters" value="0" size="3" data-price="5" />
-                    </td>
-                    <td>€5</td>
-                </tr>
-                <tr>
-                    <td>Pepper Calamari ( Starter ) - Fresh fried calamari dusted with fresh rocket salad</td>
-                    <td><input name="qnt_3" type="text" id="qnt_3" class="starters" value="0" size="3"
-                            data-price="11" /></td>
-                    <td>€11</td>
-                </tr>
-                <tr>
-                    <td>Vegetarian Starter option</td>
-                    <td><input name="qnt_4" type="text" id="qnt_4" class="vegetarian" value="0" size="3"
-                            data-price="14" /></td>
-                    <td>€14</td>
-                <tr>
-                    <th>Mains</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                <tr>
-                </tr>
-                <tr>
-                    <td>Vegan Deluxe ( Main ) - Fried chicken topped with fresh salad and in-house baked bun</td>
-                    <td><input name="qnt_5" type="text" id="qnt_5" class="main" value="0" size="3" data-price="15" />
-                    </td>
-                    <td>€15</td>
-                </tr>
-                <tr>
-                    <td>Garlic Bread ( Starter ) - Individual freshly baked rolls served with garlic butter</td>
-                    <td>
-                        <input name="qnt_6" type="text" id="qnt_6" class="main" value="0" size="3" data-price="5" />
-                    </td>
-                    <td>€5</td>
-                </tr>
+    <div class="table-content">
+        <table class>
 
-                <tr>
-                    <td>Mash potatos ( Main ) - Fried chicken topped with fresh salad and in-house baked bun</td>
-                    <td><input name="qnt_7" type="text" id="qnt_7" class="main" value="0" size="3" data-price="10" />
-                    </td>
-                    <td>€10</td>
-
-                </tr>
-
-                <td>Vegetarian Main option</td>
+            <tr>
+                <th>Starters</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            <tr>
+                <td>HONEY GLAZED ONION RINGS - sweet vidalia onions, deep fried in beer batter, glazed with thyme honey
+                </td>
                 <td>
-                    <input name="qnt_8" type="text" id="qnt_8" class="vegetarian" value="0" size="3" data-price="8" />
+                    <input name="qnt_1" type="text" id="qnt_1" class="starters" value="0" size="2" data-price="6" />
+                </td>
+                <td>€6</td>
+            </tr>
+            <tr>
+                <td>SMOKED CHICKEN QUESADILLA - with caramelized onions, roasted poblano guacamole , jicama salsa &
+                    chipotle</td>
+                <td>
+                    <input name="qnt_2" type="text" id="qnt_2" class="starters" value="0" size="2" data-price="8" />
                 </td>
                 <td>€8</td>
-                <tr>
-                    <th>Drinks</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                <tr>
-                <tr>
-                    <td>Drink 1</td>
-                    <td><input name="qnt_9" type="text" id="qnt_9" class="drinks" value="0" size="3" data-price="15" />
-                    </td>
-                    <td>€15</td>
-                </tr>
+            </tr>
+            <tr>
+                <td>ANCHO CHILE SHRIMP TACOS - with mango salsa , jalapeno-lime crème fraiche, guacamole & shredded
+                    cabbage </td>
+                <td><input name="qnt_3" type="text" id="qnt_3" class="starters" value="0" size="2" data-price="8" />
+                </td>
+                <td>€8</td>
+            </tr>
+            <tr>
+                <td>VEGETARIAN BURGUER - house-made veggie burguer with heirloom tomatoes, avocado, tomato & fresh
+                    mozzarella on a home-baked roll</td>
+                <td><input name="qnt_4" type="text" id="qnt_4" class="vegetarian" value="0" size="2" data-price="14" />
+                </td>
+                <td>€14</td>
+            <tr>
+                <th>Mains</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            <tr>
+            </tr>
+            <tr>
+                <td>CURRY TURKEY WRAP - smoked turkey, mozzarella, black olives & curried mayo in a curried spinach wrap
+                </td>
+                <td><input name="qnt_5" type="text" id="qnt_5" class="main" value="0" size="2" data-price="7" />
+                </td>
+                <td>€7</td>
+            </tr>
+            <tr>
+                <td>CHICKEN SALAD CROISSANT - house-made chicken salad with lettuce & tomato on a warm, flaky croissant
+                </td>
+                <td>
+                    <input name="qnt_6" type="text" id="qnt_6" class="main" value="0" size="2" data-price="8" />
+                </td>
+                <td>€8</td>
+            </tr>
 
-                <tr>
-                    <td>Drink 2</td>
-                    <td><input name="qnt_10" type="text" id="qnt_10" class="drinks" value="0" size="3"
-                            data-price="10" />
-                    </td>
-                    <td>€10</td>
+            <tr>
+                <td>HUMMUS PITA - chooped green avocado , olives, tomatoes & cucumbers with house-made hummus</td>
+                <td><input name="qnt_7" type="text" id="qnt_7" class="main" value="0" size="2" data-price="10" />
+                </td>
+                <td>€10</td>
 
-                </tr>
-                <tr>
-                    <td>Drink 3</td>
-                    <td><input name="qnt_11" type="text" id="qnt_11" class="drinks" value="0" size="3"
-                            data-price="10" />
-                    </td>
-                    <td>€10</td>
+            </tr>
 
-                </tr>
-                <tr>
-                    <th>Desserts</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                <tr>
-                <tr>
-                    <td>Dessert 1</td>
-                    <td><input name="qnt_12" type="text" id="qnt_12" class="desserts" value="0" size="3"
-                            data-price="15" />
-                    </td>
-                    <td>€15</td>
-                </tr>
+            <td>VEGGIE WRAP - roasted vegatables with curry mayo, crisp lettuce, tomatoes & sprouts in a spinach wrap
+            </td>
+            <td>
+                <input name="qnt_8" type="text" id="qnt_8" class="vegetarian" value="0" size="2" data-price="8" />
+            </td>
+            <td>€8</td>
+            <tr>
+                <th>Drinks</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            <tr>
+            <tr>
+                <td>COFFEE OR TEA</td>
+                <td><input name="qnt_9" type="text" id="qnt_9" class="drinks" value="0" size="2" data-price="2" />
+                </td>
+                <td>€2</td>
+            </tr>
 
-                <tr>
-                    <td>Dessert 2</td>
-                    <td><input name="qnt_13" type="text" id="qnt_13" class="desserts" value="0" size="3"
-                            data-price="10" />
-                    </td>
-                    <td>€10</td>
+            <tr>
+                <td>FRESH SQUEEZED LEMONADE</td>
+                <td><input name="qnt_10" type="text" id="qnt_10" class="drinks" value="0" size="2" data-price="3" />
+                </td>
+                <td>€3</td>
 
-                </tr>
+            </tr>
+            <tr>
+                <td>BOTTLE WATER </td>
+                <td><input name="qnt_11" type="text" id="qnt_11" class="drinks" value="0" size="2" data-price="2" />
+                </td>
+                <td>€2</td>
+
+            </tr>
+            <tr>
+                <th>Desserts</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            <tr>
+            <tr>
+                <td>CREMÈ CARAMEL - a traditional European-style custard with rich caramel sauce</td>
+                <td><input name="qnt_12" type="text" id="qnt_12" class="desserts" value="0" size="2" data-price="5" />
+                </td>
+                <td>5€</td>
+            </tr>
+
+            <tr>
+                <td>PEANUT BUTTER PIE - made with crunchy organic peanut butter in a chocolate cookie crumb crust</td>
+                <td><input name="qnt_13" type="text" id="qnt_13" class="desserts" value="0" size="2" data-price="6" />
+                </td>
+                <td>€6</td>
+
+            </tr>
 
 
 
-                <tr>
-                    <td class="total">&nbsp;</td>
-                    <td class="total right"><strong>Starter:</strong></td>
-                    <td class="total"><strong>
-                            <div id="ItemsTotalStarter">€0</div>
-                        </strong></td>
-                </tr>
-                <tr>
-                    <td class="total">&nbsp;</td>
-                    <td class="total right"><strong>Main:</strong></td>
-                    <td class="total"><strong>
-                            <div id="ItemsTotalMain">€0</div>
-                        </strong></td>
-                </tr>
+            <tr>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Starter:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotalStarter">€0</div>
+                    </strong></td>
+            </tr>
+            <tr>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Main:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotalMain">€0</div>
+                    </strong></td>
+            </tr>
 
-                <tr>
-                    <td class="total">&nbsp;</td>
-                    <td class="total right"><strong>Drinks:</strong></td>
-                    <td class="total"><strong>
-                            <div id="ItemsTotalDrinks">€0</div>
-                        </strong></td>
-                </tr>
+            <tr>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Drinks:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotalDrinks">€0</div>
+                    </strong></td>
+            </tr>
 
-                <tr>
-                    <td class="total">&nbsp;</td>
-                    <td class="total right"><strong>Desserts:</strong></td>
-                    <td class="total"><strong>
-                            <div id="ItemsTotalDesserts">€0</div>
-                        </strong></td>
-                </tr>
+            <tr>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Desserts:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotalDesserts">€0</div>
+                    </strong></td>
+            </tr>
 
-                <tr>
-                    <td class="total">&nbsp;</td>
-                    <td class="total right"><strong>Vegetarian:</strong></td>
-                    <td class="total"><strong>
-                            <div id="ItemsTotalVeg">€0</div>
-                        </strong></td>
-                </tr>
+            <tr>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Vegetarian:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotalVeg">€0</div>
+                    </strong></td>
+            </tr>
 
-                <tr>
+            <!-- <tr>
                     <td class="total">&nbsp;</td>
                     <td class="total right"><strong>Non Vegetarian:</strong></td>
                     <td class="total"><strong>
                             <div id="ItemsTotalNonVeg">€0</div>
                         </strong></td>
-                </tr>
+                </tr> -->
 
-                <tr>
-                    <td class="total">&nbsp;</td>
-                    <td class="total right"><strong>Total:</strong></td>
-                    <td class="total"><strong>
-                            <div id="ItemsTotal">€0</div>
-                        </strong></td>
-                </tr>
+            <tr>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Total:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotal">€0</div>
+                    </strong></td>
+            </tr>
 
-            </table>
-        </div>
-    </section>
+        </table>
+    </div>
 
 
     <!--========Button fetch API========-->
@@ -284,9 +273,6 @@
             </div>
 
         </footer>
-
-        <!-- ====Video tag bakground=====-->
-        <video></video>
 
         <script src="main.js"></script>
         <!--Magnific POPup Jquery also-->

@@ -1,33 +1,61 @@
-/*navbar*/
-body{
-    background-image: url(/img/background4.jpg);
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
-h1{
+
+body {
+    background: linear-gradient(to right, #9c27b0, #8ecdff);
+    /* background-image: url(/img/background4.jpg); */
+    font-family: 'Baloo Chettan 2', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.5;
+}
+
+h1 {
     color: white;
 }
 
-.nav li a{
-    text-decoration: none;
-    color: orange;
-    font-size: 30px;
-    text-transform:uppercase ;
-    font-weight: bold;
-   
+/* .main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #9c27b0, #8ecdff);
+} */
+
+nav {
+    width: 80%;
+    position: sticky;
+    margin: 20px auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
 }
-.nav li a:hover{
+
+.logo {
+    flex-basis: 20%;
+}
+
+.logo img {
+    width: 50%;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-links ul li a {
     color: #fff;
-    background: orange;
-    padding-left: 10px;
+    text-decoration: none;
 }
-.nav li{
-    margin: 20px 10px 10px 20px;
-    padding-top: 10px;
-    list-style-type:none;
-}
-.nav{
-    display: none;
-    
-}
+
 /* ====End of Navbar===== */
 
 /* ===Start password Validator */
@@ -37,19 +65,18 @@ h1{
     padding-top: 1rem;
     padding-right: 1.5rem;
     text-align: center;
-    
 }
+
 .form {
     width: 350px;
     margin-left: 400px;
-    
 }
 
 .form .form-element {
     position: relative;
     right: -32px;
-    
 }
+
 .form .form-element input {
     width: 100%;
     padding: 10px;
@@ -61,6 +88,7 @@ h1{
     outline: none;
     text-indent: 10px;
 }
+
 .form .form-element .toggle-password {
     position: absolute;
     width: 40px;
@@ -73,15 +101,19 @@ h1{
     font-size: 20px;
     cursor: pointer;
 }
+
 .form .form-element .toggle-password.active i.fa-eye {
     display: none;
 }
+
 .form .form-element .toggle-password.active i.fa-eye-slash {
     display: inline;
 }
+
 .form .form-element .toggle-password i.fa-eye-slash {
     display: none;
 }
+
 .form .form-element .password-policies {
     position: relative;
     top: 0px;
@@ -98,29 +130,33 @@ h1{
     overflow: hidden;
     transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
 }
+
 .form .form-element .password-policies.active {
     opacity: 1;
     padding: 10px;
     height: 180px;
 }
+
 .form .form-element .password-policies>div {
     margin: 15px 10px;
     font-weight: 600;
     color: #888;
     transition: all 300ms ease-in-out;
 }
+
 .form .form-element .password-policies>div.active {
     color: rgb(42, 148, 60);
 }
+
 .password-policies {
     font-size: 15px;
 }
-/* ======end of password validator======= */
 
+/* ======end of password validator======= */
 
 /* =====Table food menu===== */
 
-.table-content{
+.table-content {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.8rem;
@@ -129,38 +165,39 @@ h1{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     padding: 0rem 30rem;
     margin-left: -97px;
-    margin-right: 0px;
+    margin-right: 90px;
     border-right-width: 0px;
     border-right-style: solid;
     padding-right: 25rem;
-
-    
 }
-.table-content th{
+
+.table-content th {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
-    font-weight: bold;
-   
 }
 
-.table-content th,
-.table-content td{
-    padding: 12px 15px;
+.table-content th, .table-content td {
+    padding: 1px 1px;
 }
-.table-content tbody tr{
+
+.table-content tbody tr {
     border-bottom: 1px solid #ffffff;
 }
+
 .table-content tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
+
 .table-content tbody tr:last-of-type {
-border-bottom: 2px solid #009879;
-}
-.table-content > table:nth-child(n){
-    background: #f5f5f5;
+    border-bottom: 2px solid #009879;
 }
 
+.table-content>table:nth-child(n) {
+    background: #f5f5f5;
+    width: 100%;
+    height: 50%;
+}
 
 /* 
 
@@ -210,9 +247,7 @@ td.total {
 
 .container button {
     position: relative;
-   
 }
-
 
 .display-4 {
     font-size: 25px;
@@ -222,14 +257,17 @@ td.total {
     margin-bottom: 0.5rem;
     width: 50%;
 }
+
 #output {
     text-align: center;
     padding-left: var(--bs-gutter-x, 7.75rem);
     padding-right: var(--bs-gutter-x, 10.75rem);
     width: 1200px;
-   
-
+    width: 80%;
+    height: 50%;
+    margin: 1rem;
 }
+
 #myBtn {
     border-style: inherit;
     border-width: 30%;
