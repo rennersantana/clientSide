@@ -158,17 +158,13 @@ nav {
 
 .table-content {
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: auto;
+    margin-top: 25px;
     font-size: 0.8rem;
-    min-width: 400px;
+    width: 60%;
     border-radius: 5px 5px 0 0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    padding: 0rem 30rem;
-    margin-left: -97px;
-    margin-right: 90px;
     border-right-width: 0px;
     border-right-style: solid;
-    padding-right: 25rem;
 }
 
 .table-content th {
