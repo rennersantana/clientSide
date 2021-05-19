@@ -55,41 +55,42 @@ _id("password-field").addEventListener("keyup", function () {
 
 //Get Btn And Create Function
 document.getElementById('myBtn').addEventListener('click', getData);
-
-function getData() {
-  // console.log('test');
-
-  //Get API
-  fetch('https://randomuser.me/api/?results=5')
-    .then(res => res.json())
-    .then(data => {
-      // console.log(data);
-
-      let author = data.results;
-      console.log(author);
-
-      //Get Data Value
-      let output = "";
-
-      //Get Data Loop Through
-      author.forEach(function (lists) {
-        output += ` <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="${lists.picture.large}"" alt="Card image cap">
-                    <div class="card-body">
-              <h5 class="card-title">Name: ${lists.name.first}</h5>
-              <ul class="list-group">
-                  <li class="list-group-item">Phone Number: ${lists.cell}</li>
-    </ul>
-            </div>
-          </div>`;
+  function getData() {
+    // console.log('test');
+  
+    //Get API
+    fetch('https://randomuser.me/api/?results=5')
+      .then(res => res.json())
+      .then(data => {
+        // console.log(data);
+  
+        let author = data.results;
+        console.log(author);
+  
+        //Get Data Value
+        let output = `<div class="d-flex">`;
+  
+        //Get Data Loop Through
+        author.forEach(function (lists) {
+          output += ` <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="${lists.picture.large}"" alt="Card image cap">
+                      <div class="card-body">
+                <h5 class="card-title">Name: ${lists.name.first}</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">Phone Number: ${lists.cell}</li>
+      </ul>
+              </div>
+            </div>`;
+        });
+        output += `</div><div class="d-block"><button class="btn btn-warning" id="close_button" onclick="closeUsers()" style="margin-bottom: 12px;">Close</button></div>`;
+        //Show On Our Screen All Data
+        document.getElementById('output').innerHTML = output;
+  
       });
-
-      //Show On Our Screen All Data
-      document.getElementById('output').innerHTML = output;
-
-    });
-};
-
+  };
+  function closeUsers() {
+    document.getElementById('output').innerHTML = "";
+  }
 /*========Table content start*/
 var total_items = 13;
 
