@@ -6,7 +6,6 @@
 
 body {
     background: linear-gradient(to right, #9c27b0, #8ecdff);
-    /* background-image: url(/img/background4.jpg); */
     font-family: 'Baloo Chettan 2', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5;
 }
@@ -14,15 +13,7 @@ body {
 h1 {
     color: white;
 }
-
-/* .main {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(to right, #9c27b0, #8ecdff);
-} */
-
+/* Starts the navbar style */
 nav {
     width: 80%;
     position: sticky;
@@ -55,8 +46,8 @@ nav {
     color: #fff;
     text-decoration: none;
 }
-
 /* ====End of Navbar===== */
+
 
 /* ===Start password Validator */
 

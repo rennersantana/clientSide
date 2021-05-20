@@ -65,7 +65,7 @@ document.getElementById('myBtn').addEventListener('click', getData);
         // console.log(data);
   
         let author = data.results;
-        console.log(author);
+        //console.log(author);
   
         //Get Data Value
         let output = `<div class="d-flex">`;
