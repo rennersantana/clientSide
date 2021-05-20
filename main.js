@@ -55,45 +55,42 @@ _id("password-field").addEventListener("keyup", function () {
 
 //Get Btn And Create Function
 document.getElementById('myBtn').addEventListener('click', getData);
-  function getData() {
-    // console.log('test');
-  
-    //Get API
-    fetch('https://randomuser.me/api/?results=5')
-      .then(res => res.json())
-      .then(data => {
-        // console.log(data);
-  
-        let author = data.results;
-        //console.log(author);
-  
-        //Get Data Value
-        let output = `<div class="d-flex">`;
-  
-        //Get Data Loop Through
-        author.forEach(function (lists) {
-          output += ` <div class="card" style="width: 18rem;">
+function getData() {
+
+  //Get API
+  fetch('https://randomuser.me/api/?results=5')
+    .then(res => res.json())
+    .then(data => {
+
+      let author = data.results;
+    
+      //Get Data Value
+      let output = `<div class="d-flex">`;
+
+      //Get Data Loop Through
+      author.forEach(function (lists) {
+        output += ` <div class="card" style="width: 18rem;">
                       <img class="card-img-top" src="${lists.picture.large}"" alt="Card image cap">
                       <div class="card-body">
                 <h5 class="card-title">Name: ${lists.name.first}</h5>
                 <ul class="list-group">
                     <li class="list-group-item">Phone Number: ${lists.cell}</li>
-      </ul>
+                 </ul>
               </div>
             </div>`;
-        });
-        output += `</div><div class="d-block"><button class="btn btn-warning" id="close_button" onclick="closeUsers()" style="margin-bottom: 12px;">Close</button></div>`;
-        //Show On Our Screen All Data
-        document.getElementById('output').innerHTML = output;
-  
       });
-  };
-  function closeUsers() {
-    document.getElementById('output').innerHTML = "";
-  }
+      output += `</div><div class="d-block"><button class="btn btn-warning" id="close_button" onclick="closeUsers()" style="margin-bottom: 12px;">Close</button></div>`;
+      //Show On Our Screen All Data
+      document.getElementById('output').innerHTML = output;
+
+    });
+};
+function closeUsers() {
+  document.getElementById('output').innerHTML = "";
+}
+
 /*========Table content start*/
 var total_items = 13;
-
 
 function CalculateItemsValue(e) {
 
@@ -102,20 +99,19 @@ function CalculateItemsValue(e) {
   var totalDrinks = 0;
   var totalDesserts = 0;
   var totalVeg = 0;
-  // var totalNonVeg = 0;
 
-  for (var i=1;i<=total_items;i++){
-    var id = "qnt_"+i;
+  for (var i = 1; i <= total_items; i++) {
+    var id = "qnt_" + i;
 
 
     var item = document.getElementById(id);
-    var itemClass =item.className;
+    var itemClass = item.className;
     var itemQuant = parseInt(item.value);
     var itemPrice = parseInt(item.getAttribute("data-price"));
 
 
     if (itemClass === "main") {
-      totalMain +=  itemQuant * itemPrice;
+      totalMain += itemQuant * itemPrice;
     }
     else if (itemClass === "starters") {
 
@@ -136,24 +132,24 @@ function CalculateItemsValue(e) {
     }
 
 
-  document.getElementById('ItemsTotalMain').innerHTML = "€" + totalMain;
-  document.getElementById('ItemsTotalStarter').innerHTML = "€" + totalStarter;
-  document.getElementById('ItemsTotalDrinks').innerHTML = "€" + totalDrinks;
-  document.getElementById('ItemsTotalDesserts').innerHTML = "€" + totalDesserts;
-  document.getElementById('ItemsTotalVeg').innerHTML = "€" + totalVeg;
-  // document.getElementById('ItemsTotalNonVeg').innerHTML = "€" + totalNonVeg;
+    document.getElementById('ItemsTotalMain').innerHTML = "€" + totalMain;
+    document.getElementById('ItemsTotalStarter').innerHTML = "€" + totalStarter;
+    document.getElementById('ItemsTotalDrinks').innerHTML = "€" + totalDrinks;
+    document.getElementById('ItemsTotalDesserts').innerHTML = "€" + totalDesserts;
+    document.getElementById('ItemsTotalVeg').innerHTML = "€" + totalVeg;
+  
 
 
-  document.getElementById('ItemsTotal').innerHTML = "€" + (totalMain + totalStarter + totalDrinks + totalDesserts + totalVeg);
-}
+    document.getElementById('ItemsTotal').innerHTML = "€" + (totalMain + totalStarter + totalDrinks + totalDesserts + totalVeg);
+  }
 }
 
 document.querySelectorAll('[id^="qnt_"]').forEach(item => {
-  item.addEventListener('keyup', function(e) {
+  item.addEventListener('keyup', function (e) {
     if (e.keyCode === 13)
-    CalculateItemsValue(e)
+      CalculateItemsValue(e)
 
   });
 
 });
-/*========Table content start*/
+/*========Table content end*/

@@ -4,10 +4,7 @@
     font-family: sans-serif;
 }
 
-/* ====start body style==== */
-
-
-
+/* ====Start body style==== */
 .main{
     width: 100%;
     height: 100vh;
@@ -15,6 +12,7 @@
     overflow: hidden;
     background: linear-gradient(to right, #9c27b0, #8ecdff);
 }
+/*=====Start navBar=====*/
 nav{
     width: 80%;
     position: sticky;
@@ -42,9 +40,9 @@ flex-basis: 20%;
     color: #fff;
     text-decoration: none;
 }
+/*===== End of nav bar =====*/
 
-/* End of nav bar */
-
+/*===== Start features =====*/
 .information{
     width: 1000px;
     height: 1000px;
@@ -62,8 +60,6 @@ flex-basis: 20%;
     border-radius: 50%;
     transform: rotate(0deg);
     transition: 1s;
-  
-
 }
 .feature img{
     width: 70px;

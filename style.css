@@ -13,7 +13,7 @@ body {
 h1 {
     color: white;
 }
-/* Starts the navbar style */
+/* ====Start of Navbar===== */
 nav {
     width: 80%;
     position: sticky;
@@ -50,7 +50,6 @@ nav {
 
 
 /* ===Start password Validator */
-
 .password-box {
     position: position;
     padding-top: 1rem;
@@ -142,11 +141,9 @@ nav {
 .password-policies {
     font-size: 15px;
 }
-
 /* ======end of password validator======= */
 
 /* =====Table food menu===== */
-
 .table-content {
     border-collapse: collapse;
     margin: auto;
@@ -185,49 +182,6 @@ nav {
     width: 100%;
     height: 50%;
 }
-
-/* 
-
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    padding: 5px;
-} 
-
-table {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 12px;
-    width: 800px;
-    background: #f5f5f5;
-    size: 8rem;
-}
-
-table th {
-    background-color: cadetblue;
-}
-
-td.total {
-    background-color: lightgrey;
-}
-
-.right {
-    text-align: right;
-}
-
-.table-content {
-    padding: 0rem 30rem;
-    margin-left: -97px;
-    border-radius: 50px;
-    margin-right: 0px;
-    border-right-width: 0px;
-    border-right-style: solid;
-    padding-right: 25rem;
-    
-} */
-
 /* ======End of food menu====== */
 
 /*=====Start the ramdom API=====*/
